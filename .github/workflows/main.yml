@@ -15,5 +15,11 @@ jobs:
         java-version: '15'
         distribution: 'adopt'
         cache: maven
-    - name: Build with Maven
+    - name: Step 1 - Build with Maven
       run: mvn -B package --file pom.xml
+      
+    - name: Step 2 - Run the Maven verify phase
+      run: mvn --batch-mode --update-snapshots verify
+      
+    - name: Run tests with Maven
+      run: mvn -B test --file pom.xml
