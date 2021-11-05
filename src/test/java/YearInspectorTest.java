@@ -55,7 +55,7 @@ public class YearInspectorTest {
 
     @Test
     public void isYearNotDivisibleBy4(){
-        assertEquals(false, currentYear.isLeapYear(20));
+        assertEquals(false, currentYear.isLeapYear(2021));
     }
 
     @Test
